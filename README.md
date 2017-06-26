@@ -9,7 +9,7 @@ You need a working copy of npm, the package manager that comes bundled with [Nod
 Using npm, install ESLint:
 
 ```
-npm install -g eslint
+npm install --save-dev eslint
 ```
 
 ## Installation
@@ -20,6 +20,7 @@ curl -s https://raw.githubusercontent.com/hackreactor-labs/pomander/master/bin/i
 
 ## Usage
 Pomander uses a pre-commit hook to run staged JavaScript files through ESLint before each commit.
+This version uses the locally-installed version of eslint to enable use of npm-installed style guide/eslint configurations like eslint-config-airbnb.
 
 [ESLint](http://eslint.org/) is a popular linter that checks your code for syntax and style errors. By default, ESLint only checks for syntax errors. To create a more robust rule-set, you need to [set up ESLint in your project](http://eslint.org/docs/user-guide/getting-started) 
 
