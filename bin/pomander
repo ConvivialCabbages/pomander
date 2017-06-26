@@ -27,7 +27,7 @@ which eslint &> /dev/null
 if [[ "$?" == 1 ]]; then
   echo -e "${COLOR_RED}Pomander failed:${COLOR_RESET} ESLint not found! Please install ESLint"
   echo -e "Make sure you have Node installed then run:"
-  echo -e "    ${COLOR_YELLOW}npm install -g eslint${COLOR_RESET}"
+  echo -e "    ${COLOR_YELLOW}npm install --save-dev eslint${COLOR_RESET}"
   exit 1
 fi
 
@@ -36,7 +36,8 @@ echo -e "${COLOR_MAGENTA}Sniffing your code, hang tight...${COLOR_RESET}"
 
 for FILE in $STAGED_FILES
 do
-  eslint "$FILE"
+  ROOT_DIR=$(git rev-parse --show-toplevel)
+  $ROOT_DIR/node_modules/.bin/eslint "$FILE"
 
   if [[ "$?" == 0 ]]; then
     echo -e "👍  Passed: $FILE"
