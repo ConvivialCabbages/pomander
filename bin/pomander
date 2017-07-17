@@ -49,7 +49,7 @@ done
 
 # Report results
 if ! $PASSED; then
-  echo -e "\n${COLOR_RED}Pomander failed:${COLOR_RESET} Your commit contains files that do not contain proper syntax or violate the Hack Reactor style guide. Please fix the errors and try again. Don't forget to 'git add' the fixed files!"
+  echo -e "\n${COLOR_RED}Pomander failed:${COLOR_RESET} Your commit contains files that do not contain proper syntax or violate the style guide. Please fix the errors and try again. Don't forget to 'git add' the fixed files!"
   exit 1
 else
   echo -e "${COLOR_GREEN}All files passed!${COLOR_RESET}"
