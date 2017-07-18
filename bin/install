@@ -19,4 +19,9 @@ rm -f pre-commit
 curl -sS https://raw.githubusercontent.com/mementologists/pomander/master/bin/lint_and_run > pre-commit
 chmod +x pre-commit
 echo "Lint and Test Ready to go!"
+cd githooks
+https://raw.githubusercontent.com/mementologists/pomander/master/bin/pomander
+echo "Pomander Ready to go!"
+https://raw.githubusercontent.com/mementologists/pomander/master/bin/run_test
+echo "Run Test Ready to go!"
 exit 0
