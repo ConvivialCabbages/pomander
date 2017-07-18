@@ -24,10 +24,10 @@ cd pomhooks
 curl -sS https://raw.githubusercontent.com/mementologists/pomander/test/lintAndTest/bin/pomander > pomander
 chmod +x pomander
 echo "Pomander Ready to go!"
-curl -sS https://raw.githubusercontent.com/mementologists/pomander/test/lintAndTest/bin/run_tests > run_tests
+curl -sS https://raw.githubusercontent.com/mementologists/pomander/test/lintAndTest/bin/run_test > run_tests
 chmod +x run_tests
 echo "Run Test Ready to go!"
 exit 0
 
-
+pomander/bin/run_test
 
