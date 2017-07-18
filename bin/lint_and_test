@@ -1,0 +1,17 @@
+#!/bin/bash
+
+$ROOT_DIR/pomHooks/pomander
+
+if [[ "$?" == 0 ]]; then
+  echo -e "👍  Pomander Passed! Running tests..."
+  $ROOT_DIR/pomHooks/run_test
+  if [["$?" == 0]]; then
+    echo -e "👍  All tests passed!"
+  else
+    echo -e "❌  Not all tests passed!"
+  fi
+else
+  echo -e "❌  Pomander lint checks failed!"
+fi
+
+exit $?

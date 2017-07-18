@@ -1,0 +1,11 @@
+#!/bin/bash
+
+yarn run test
+
+if [[ "$?" == 0 ]]; then
+  echo -e "👍  Passed: $FILE"
+else
+  echo -e "❌  Failed: $FILE"
+fi
+
+exit $?
