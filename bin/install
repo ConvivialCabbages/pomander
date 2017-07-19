@@ -19,7 +19,9 @@ curl -sS https://raw.githubusercontent.com/mementologists/pomander/test/lintAndT
 chmod +x pre-commit
 echo "Lint and Test Ready to go!"
 cd $ROOT_DIR
-mkdir -p pomHooks
+if [ ! -d "pomHooks" ] ; then
+  mkdir pomHooks
+fi
 cd pomHooks
 curl -sS https://raw.githubusercontent.com/mementologists/pomander/test/lintAndTest/bin/pomander > pomander
 chmod +x pomander
