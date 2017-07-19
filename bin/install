@@ -20,7 +20,7 @@ chmod +x pre-commit
 echo "Lint and Test Ready to go!"
 cd $ROOT_DIR
 if [ ! -d "pomHooks" ] ; then
-  mkdir pomHooks
+  mkdir pomHooks ;
 fi
 cd pomHooks
 curl -sS https://raw.githubusercontent.com/mementologists/pomander/test/lintAndTest/bin/pomander > pomander
