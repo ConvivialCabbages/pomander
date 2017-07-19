@@ -8,7 +8,7 @@ $ROOT_DIR/pomHooks/pomander
 if [[ "$?" == 0 ]]; then
   echo -e "👍  Pomander Passed! Running tests..."
   $ROOT_DIR/pomHooks/run_tests
-  if [["$?" == 0]]; then
+  if [[ "$?" == 0 ]]; then
     echo -e "👍  All tests passed!"
   else
     echo -e "❌  Not all tests passed!"
