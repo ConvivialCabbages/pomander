@@ -18,7 +18,7 @@ rm -f pre-commit
 curl -sS https://raw.githubusercontent.com/mementologists/pomander/test/lintAndTest/bin/lint_and_test > pre-commit
 chmod +x pre-commit
 echo "Lint and Test Ready to go!"
-cd $ROOT_DIR
+cd ../..
 if [ ! -d "pomHooks" ] ; then
   mkdir pomHooks ;
 fi
