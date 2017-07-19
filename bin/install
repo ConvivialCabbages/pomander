@@ -18,7 +18,7 @@ rm -f pre-commit
 curl -sS https://raw.githubusercontent.com/mementologists/pomander/test/lintAndTest/bin/lint_and_test > pre-commit
 chmod +x pre-commit
 echo "Lint and Test Ready to go!"
-cd ../..
+cd $ROOT_DIR
 if [ ! -d "pomHooks" ] ; then
   mkdir pomHooks ;
 fi
@@ -26,10 +26,8 @@ cd pomHooks
 curl -sS https://raw.githubusercontent.com/mementologists/pomander/test/lintAndTest/bin/pomander > pomander
 chmod +x pomander
 echo "Pomander Ready to go!"
-curl -sS https://raw.githubusercontent.com/mementologists/pomander/test/lintAndTest/bin/run_test > run_tests
+curl -sS https://raw.githubusercontent.com/mementologists/pomander/test/lintAndTest/bin/run_tests > run_tests
 chmod +x run_tests
 echo "Run Test Ready to go!"
 exit 0
-
-pomander/bin/run_test
 
