@@ -4,8 +4,8 @@ yarn run test
 
 if [[ "$?" == 0 ]]; then
   echo -e "👍  Passed: $FILE"
+  exit 0
 else
   echo -e "❌  Failed: $FILE"
+  exit 1
 fi
-
-exit $?
