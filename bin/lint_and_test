@@ -10,11 +10,12 @@ if [[ "$?" == 0 ]]; then
   $ROOT_DIR/pomHooks/run_tests
   if [[ "$?" == 0 ]]; then
     echo -e "👍  All tests passed!"
+    exit 0
   else
     echo -e "❌  Not all tests passed!"
+    exit 1
   fi
 else
   echo -e "❌  Pomander lint checks failed!"
+  exit 1
 fi
-
-exit $?
